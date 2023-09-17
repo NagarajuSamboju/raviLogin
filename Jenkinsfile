@@ -6,7 +6,7 @@ pipeline {
                 checkout scmGit(branches: [[name: '*/DEV']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/NagarajuSamboju/raviLogin.git']])
             }
         }
-        stage('build'){
+        stage('build with MVN'){
             steps{
                 sh 'mvn package'
             }
